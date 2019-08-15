@@ -47,6 +47,24 @@ public class Function {
         return  arr;
     }
 
+    public void sortArray(int[] arr){
+        if (arr == null){
+            System.out.println("Empty array !!!");
+        }
+
+        for (int i = 0; i < arr.length-1; i++){
+            for(int j = i + 1; j < arr.length; j ++) {
+                if (arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+
     public void Search(int[] arr, int n){
         int first, last, middle, search;
         System.out.println("Enter search number: ");
@@ -67,6 +85,7 @@ public class Function {
             else {
                 last = middle - 1;
             }
+
             middle = (first + last)/2;
         }
         if (first > last){

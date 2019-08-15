@@ -13,6 +13,7 @@ public class Main {
             System.out.println("Enter number of element: ");
             n = f.checkValidation();
             arr = f.createArray(n);
+            f.sortArray(arr);
             f.Search(arr,n);
     }
 }
